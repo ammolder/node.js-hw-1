@@ -22,6 +22,9 @@ async function invokeAction({ action, id, name, email, phone }) {
 
     case "add":
       await addContact(name, email, phone);
+      console.log(
+        `Congratulations, ${name} ${email} ${phone} contact has been successfully added`
+      );
       break;
 
     case "remove":
