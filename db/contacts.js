@@ -14,8 +14,8 @@ async function writeContacts(contacts) {
   await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
 }
 
-function listContacts() {
-  const contacts = contactsList();
+async function listContacts() {
+  const contacts = await contactsList();
   return contacts;
 }
 
